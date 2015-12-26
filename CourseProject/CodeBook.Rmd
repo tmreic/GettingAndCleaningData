@@ -1,0 +1,160 @@
+# Code Book
+
+This code book summarizes the resulting data fields in `FinalDataSet.csv` and `FinalMergedDataSet.csv`.
+
+##Transformations & cleanup of data
+1. Downloads & extracts the dataset if it does not already exist in the working directory.
+2. Load the activity and feature files.
+3. Loads both the training and test datasets.
+4. Creates unique merge key on training and test data .
+5. Merges the training and test data sets.
+6. Merges measurement data with subjects & activity lablels.
+7. Adds feature names to variables.
+8. Subset data with mean or std observations.
+9. Rename feature names to make more readable.
+10.Creates a  dataset that consists of the mean value of each variable for each subject, ActivityNum, and ActivityName grouping.
+11. The script will produce two files.  FinalDataSet.txt which combines training and test sets with mean & std variables and FinalMeanDataSet.txt contains dataset with the mean of each variable for each subject, ActivityNum, and ActivityName.
+
+
+## Identifiers
+
+### ActivityNum
+ID number unique for each activity name.
+### subject
+ID of subject who carried out the experiment
+### ActivityName
+The name of the activity
+
+## Measurements
+### TimeBodyAcc-mean-X
+Mean value of X coordinate of body acceleration captured by accelerometer in the time domain
+### TimeBodyAcc-mean-Y
+Mean value of Y coordinate of body acceleration captured by accelerometer in the time domain
+### TimeBodyAcc-mean-Z
+Mean value of Z coordinate of body acceleration captured by accelerometer in the time domain
+### TimeBodyAcc-std-X
+Standard deviation of X coordinate of body acceleration captured by accelerometer in the time domain
+### TimeBodyAcc-std-Y
+Standard deviation of Y coordinate of body acceleration captured by accelerometer in the time domain
+### TimeBodyAcc-std-Z
+Standard deviation of Z coordinate of body acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-mean-X
+Mean value of X coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-mean-Y
+Mean value of Y coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-mean-Z
+Mean value of Z coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-std-X
+Standard deviation of X coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-std-Y
+Standard deviation of Y coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeGravityAcc-std-Z
+Standard deviation of Z coordinate of gravity acceleration captured by accelerometer in the time domain
+### TimeBodyAccJerk-mean-X
+Mean value of X coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerk-mean-Y
+Mean value of Y coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerk-mean-Z
+Mean value of Z coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerk-std-X
+Standard deviation of X coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerk-std-Y
+Standard deviation ofYX coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerk-std-Z
+Standard deviation of Z coordinate of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyGyro-mean-X
+Mean value of X coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyro-mean-Y
+Mean value of Y coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyro-mean-Z
+Mean value of Z coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyro-std-X
+Standard deviation of X coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyro-std-Y
+Standard deviation of Y coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyro-std-Z
+Standard deviation of Z coordinate of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyroJerk-mean-X
+Mean value of X coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerk-mean-Y
+Mean value of Y coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerk-mean-Z
+Mean value of Z coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerk-std-X
+Standard deviation of X coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerk-std-Y
+Standard deviation of Y coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerk-std-Z
+Standard deviation of Z coordinate of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyAccMagnitude-mean
+Mean value of magnitude of body acceleration captured by accelerator in the time domain
+### TimeBodyAccMagnitude-std
+Standard deviation of magnitude of body acceleration captured by accelerator in the time domain
+### TimeGravityAccMagnitude-mean
+Mean value of magnitude of gravity acceleration captured by accelerator in the time domain
+### TimeGravityAccMagnitude-std
+Standard deviation of magnitude of gravity acceleration captured by accelerator in the time domain
+### TimeBodyAccJerkMagnitude-mean
+Mean value of magnitude of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyAccJerkMagnitude-std
+Standard deviation of magnitude of body acceleration jerk captured by accelerometer in the time domain
+### TimeBodyGyroMagnitude-mean
+Mean value of magnitude of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyroMagnitude-std
+Standard deviation of magnitude of body acceleration captured by gyroscope in the time domain
+### TimeBodyGyroJerkMagnitude-mean
+Mean value of magnitude of body acceleration jerk captured by gyroscope in the time domain
+### TimeBodyGyroJerkMagnitude-std
+Standard deviation of magnitude of body acceleration jerk captured by gyroscope in the time domain
+### FrequencyBodyAcc-mean-X
+Mean value of X coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAcc-mean-Y
+Mean value of Y coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAcc-mean-Z
+Mean value of Z coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAcc-std-X
+Standard deviation value of X coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAcc-std-Y
+Standard deviation value of Y coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAcc-std-Z
+Standard deviation value of Z coordinate of body acceleration captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-mean-X
+Mean value of X coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-mean-Y
+Mean value of Y coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-mean-Z
+Mean value of Z coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-std-X
+Standard deviation of X coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-std-Y
+Standard deviation of Y coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerk-std-Z
+Standard deviation of Z coordinate of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyGyro-mean-X
+Mean value of X coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyro-mean-Y
+Mean value of Y coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyro-mean-Z
+Mean value of Z coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyro-std-X
+Standard deviation of X coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyro-std-Y
+Standard deviation of Y coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyro-std-Z
+Standard deviation of Z coordinate of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyAccMagnitude-mean
+Mean value of magnitude of body acceleration captured by accelerator in the frequency domain
+### FrequencyBodyAccMagnitude-std
+Standard deviation of magnitude of body acceleration captured by accelerator in the frequency domain
+### FrequencyBodyAccJerkMagnitude-mean
+Mean value of magnitude of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyAccJerkMagnitude-std
+Standard deviation of magnitude of body acceleration jerk captured by accelerometer in the frequency domain
+### FrequencyBodyGyroMagnitude-mean
+Mean value of magnitude of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyroMagnitude-std
+Standard deviation of magnitude of body acceleration captured by gyroscope in the frequency domain
+### FrequencyBodyGyroJerkMagnitude-mean
+Mean value of magnitude of body acceleration jerk captured by gyroscope in the frequency domain
+### FrequencyBodyGyroJerkMagnitude-std
+Standard deviation of magnitude of body acceleration jerk captured by gyroscope in the frequency domain
